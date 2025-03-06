@@ -1,0 +1,29 @@
+<div class="login-container">
+  <div class="left-section">
+    <img src="login-signupImage.jpg" alt="Welcome Image">
+    <h2>Welcome Back!</h2>
+  </div>
+  <div class="right-section">
+    <h2>Login</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="control form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <div class="text-danger" *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].errors">
+          <span *ngIf="loginForm.controls['email'].errors['required']">This field is required</span>
+          <span *ngIf="loginForm.controls['email'].errors['email']">Please enter a valid email address</span>
+        </div>
+      </div>
+      <div class="control form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" required>
+        <div class="text-danger" *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].errors">
+          <span *ngIf="loginForm.controls['password'].errors['required']">This field is required</span>
+        </div>
+      </div>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    <p>Don't have an account? <a routerLink="/signup">Sign up here</a></p>
+  </div>
+</div>

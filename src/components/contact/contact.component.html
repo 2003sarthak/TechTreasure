@@ -1,0 +1,72 @@
+<div class="contact-form-section">
+  <h1> Contact Us</h1>
+  <form [formGroup]="form"  (ngSubmit)="onSave()" class="contact-form">
+   
+   
+ 
+      <div class="control form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" formControlName="name" />
+     
+        <div class="text-danger">
+          @if (form.controls['name'].touched && form.controls['name'].errors?.['required']){
+            <span>This field is required</span>
+          }
+          @else if(form.controls['name'].touched && form.controls['name'].errors?.['minlength']){
+            <span>Min 4 characters required</span>
+          }
+        </div>
+      </div>
+ 
+      <div class="control form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" formControlName="email"/>
+        <div class="text-danger" *ngIf="getError(form.get('email'))">
+          {{
+            getError(form.get('email'))
+          }}
+ 
+        </div>
+       
+     
+      </div>
+ 
+      <div class="control form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" formControlName="phone">
+        <div class="text-danger">
+          @if (form.controls['phone'].touched && form.controls['phone'].errors?.['required']) {
+              <span>This field is required</span>
+          }
+          @else if (form.controls['phone'].touched && form.controls['phone'].errors?.['pattern']) {
+              <span>Invalid phone number. Must be 10 digits</span>
+          }
+      </div>
+      </div>
+ 
+      <div class="control form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" formControlName="message"></textarea>
+      </div>
+      <div class="text-danger">
+        @if (form.controls['message'].touched && form.controls['message'].errors?.['required']) {
+            <span>This field is required</span>
+        }
+        @else if (form.controls['message'].touched && form.controls['message'].errors?.['minlength']) {
+            <span>Minimum 10 characters required</span>
+        }
+        @else if (form.controls['message'].touched && form.controls['message'].errors?.['maxlength']) {
+            <span>Maximum 500 characters allowed</span>
+        }
+      </div>
+   
+      <button type="submit" class="submit-button" [disabled]=form.invalid >Submit</button>
+      <!-- (click)="onSave()" -->
+   
+   
+</form>
+</div>
+ 
+<!-- <div class="col-4">
+  {{formValue|json}}
+</div> -->

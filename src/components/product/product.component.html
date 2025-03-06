@@ -1,0 +1,22 @@
+<div class="products-page">
+  <div class="products-header">
+    <h1>Our Products</h1>
+    <p>Explore our wide range of electronics and find the perfect item for you. Don't miss out on our special offers.</p>
+  </div>
+  <div class="card-container">
+    <div class="product-card" *ngFor="let product of products" (click)="viewProduct()">
+      <div class="wishlist-icon" (click)="addToWishlist(product); $event.stopPropagation()">
+        <i class="fas fa-heart"></i>
+      </div>
+      <img [src]="product.image" alt="Product Image">
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.shortDescription }}</p>
+        <p>Price: ${{ product.price }}</p>
+        <button (click)="addToCart(product); $event.stopPropagation()" [disabled]="product.quantity === 0" class="add-to-cart">
+          {{ product.quantity === 0 ? 'Out of Stock' : 'Add to Cart' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

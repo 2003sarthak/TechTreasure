@@ -1,0 +1,123 @@
+.home-page { 
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+  color: #1c1c1e;
+}
+
+.welcome-section p {
+  color: #2c2c2e;
+}
+ 
+.trending-products {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.trending-products h2{
+  margin-bottom: 50px;
+}
+
+.product-page-button {
+  background-color: #fd7e14;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-page-button:hover {
+  background-color: #e56e0c;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #2c2c2e;
+  color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
+  color: #fd7e14;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon:hover {
+  color: #ffffff; 
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px; 
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto;
+}
+.product-card img:hover{
+  border: 2px solid #fd7e14;
+}
+
+.product-info {
+  padding: 10px;
+  text-align: center; 
+}
+.product-info h3{
+  font-size:1.2rem;
+}
+
+.add-to-cart {
+  background-color: #fd7e14;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.add-to-cart:hover{
+  background-color: #ffffff;
+  color: #fd7e14;
+  border: 1px solid #fd7e14 ;
+}
+.add-to-cart[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+  border: 1px solid #ccc;
+}

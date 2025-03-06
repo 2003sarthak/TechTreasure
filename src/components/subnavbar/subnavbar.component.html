@@ -1,0 +1,24 @@
+<div class="sub-navbar">
+  <button class="sub-nav-toggle" (click)="toggleSubNav()">☰</button>
+  <div class="sub-nav-links">
+    <a [routerLink]="['/product', 'all']">
+      <i class="fas fa-boxes"></i> All Products
+    </a>
+    <a [routerLink]="['/product', 'mobile']">
+      <i class="fas fa-mobile-alt"></i> Mobiles
+    </a>
+    <a [routerLink]="['/product', 'laptops']">
+      <i class="fas fa-laptop"></i> Laptops
+    </a>
+    <a [routerLink]="['/product', 'tablets']">
+      <i class="fas fa-tablet-alt"></i> Tablets
+    </a>
+    <a [routerLink]="['/product', 'accessories']">
+      <i class="fas fa-headphones-alt"></i> Accessories
+    </a>
+  </div>
+  <div class="search-container">
+    <input type="text" placeholder="Search products..." class="search-input" [(ngModel)]="searchQuery">
+    <button class="search-button" (click)="searchProducts()">Search</button>
+  </div>
+</div>

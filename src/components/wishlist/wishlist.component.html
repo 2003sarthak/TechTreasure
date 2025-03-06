@@ -1,0 +1,22 @@
+<div class="wishlist">
+  <h2>Wishlist</h2>
+  <p>Here are the items you've added to your wishlist. You can move items to your cart or remove them from your wishlist.</p>
+  <div *ngIf="wishlistItems.length === 0" class="empty-wishlist">
+    <i class="fas fa-heart-broken"></i>
+    <p>Your wishlist is empty.</p>
+  </div>
+  <div *ngFor="let item of wishlistItems; let i = index" class="wishlist-item">
+    <img [src]="item.image" alt="Product Image">
+    <div class="item-details">
+      <h4>{{ item.name }}</h4>
+      <p>Price: ${{ item.price }}</p>
+      <p>Description: {{ item.shortDescription }}</p>
+      <button (click)="addToCart(i)" [disabled]="item.quantity === 0" class="add-to-cart">
+        {{ item.quantity === 0 ? 'Out of Stock' : 'Add to Cart' }}
+      </button>
+    </div>
+    <button (click)="removeFromWishlist(i)" class="remove-item">
+      <i class="fas fa-heart"></i>
+    </button>
+  </div>
+</div>

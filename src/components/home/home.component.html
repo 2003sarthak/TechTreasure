@@ -1,0 +1,26 @@
+<div class="home-page">
+  <div class="welcome-section">
+    <h1>Welcome to TechTreasure</h1>
+    <p>We offer a wide range of electronics with amazing discounts! Don't miss out on our special offers.</p>
+    <button class="product-page-button" routerLink="/product">Go to Products Page</button>
+  </div>
+  <div class="trending-products">
+    <h2>These are some of our trending products</h2>
+    <div class="card-container">
+      <div class="product-card" *ngFor="let product of trendingProducts" (click)="viewProduct()">
+        <div class="wishlist-icon" (click)="addToWishlist(product); $event.stopPropagation()">
+          <i class="fas fa-heart"></i>
+        </div>
+        <img [src]="product.image" alt="Product Image">
+        <div class="product-info">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.shortDescription }}</p>
+          <p>Price: ${{ product.price }}</p>
+          <button (click)="addToCart(product); $event.stopPropagation()" [disabled]="product.quantity === 0" class="add-to-cart">
+            {{ product.quantity === 0 ? 'Out of Stock' : 'Add to Cart' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

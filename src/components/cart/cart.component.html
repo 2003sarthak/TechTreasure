@@ -1,0 +1,31 @@
+<div class="cart">
+  <h2>Shopping Cart</h2>
+  <p>Review the items in your cart before proceeding to checkout. You can adjust quantities or remove items as needed.</p>
+  
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <i class="fas fa-shopping-basket"></i>
+    <p>Your cart is empty.</p>
+  </div>
+  
+  <div *ngIf="cartItems.length > 0">
+    <div *ngFor="let item of cartItems; let i = index" class="cart-item">
+      <img [src]="item.image" alt="Product Image">
+      <div class="item-details">
+        <h4>{{ item.name }}</h4>
+        <p>Price: ${{ item.price }}</p>
+        <p>Quantity: 
+          <button (click)="decreaseQuantity(i)">-</button>
+          {{ item.quantity }}
+          <button (click)="increaseQuantity(i)">+</button>
+        </p>
+        <p>Total: ${{ item.price * item.quantity }}</p>
+        <button (click)="removeItem(i)" class="remove-item">Remove</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <p><strong>Subtotal: ${{ totalCost }}</strong></p>
+      <button (click)="checkout()" class="checkout-button">Checkout</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="OIP1.jpg" alt="Logo Image" class="logo-image">
+    <a href="#" class="logo">TechTreasure</a>
+  </div>
+  <button class="nav-toggle" (click)="toggleNav()">☰</button>
+  <div class="nav-links">
+    <a routerLink="/home">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a [routerLink]="['/product', 'all']">
+      <i class="fas fa-box-open"></i> Products
+    </a>
+    <a routerLink="/about">
+      <i class="fas fa-info-circle"></i> About
+    </a>
+    <a routerLink="/contact">
+      <i class="fas fa-envelope"></i> Contact Us
+    </a>
+    <a routerLink="/cart" class="nav-icon">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+    <a routerLink="/wishlist" class="nav-icon">
+      <i class="fas fa-heart"></i>
+    </a>
+    <div class="dropdown" *ngIf="username">
+      <button class="dropbtn">
+        <i class="fas fa-user"></i> {{ username }} <i class="fas fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a (click)="logout()">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>

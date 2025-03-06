@@ -1,0 +1,39 @@
+<div class="signup-container">
+  <div class="left-section">
+    <img src="login-signupImage.jpg" alt="Welcome Image">
+    <h2>Welcome to TechTreasure!</h2>
+  </div>
+  <div class="right-section">
+    <h2>Sign Up</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+      <div class="control form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" required>
+        <div class="text-danger" *ngIf="signupForm.controls['username'].touched && signupForm.controls['username'].errors">
+          <span *ngIf="signupForm.controls['username'].errors['required']">This field is required</span>
+          <span *ngIf="signupForm.controls['username'].errors['minlength']">Username must be at least 6 characters long</span>
+        </div>
+      </div>
+      <div class="control form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <div class="text-danger" *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].errors">
+          <span *ngIf="signupForm.controls['email'].errors['required']">This field is required</span>
+          <span *ngIf="signupForm.controls['email'].errors['email']">Please enter a valid email address</span>
+          <span *ngIf="signupForm.controls['email'].errors['pattern']">Email must contain 'at' symbol and end with .com or .in</span>
+        </div>
+      </div>
+      <div class="control form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" required>
+        <div class="text-danger" *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].errors">
+          <span *ngIf="signupForm.controls['password'].errors['required']">This field is required</span>
+          <span *ngIf="signupForm.controls['password'].errors['pattern']">Password must be at least 6 characters long and include a special character, an uppercase letter, and a number</span>
+        </div>
+      </div>
+      <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+    </form>
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+  </div>
+</div>
