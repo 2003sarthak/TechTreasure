@@ -1,0 +1,220 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for service/product.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">service</a> product.service.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">25% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>2/8</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">20% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">33.33% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>2/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { Product } from '../models/product';
+&nbsp;
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+  private products: Product[] = [
+    { name: 'Smartphone X', shortDescription: 'Latest smartphone with high-end features', price: 799, image: 'https://th.bing.com/th/id/OIP.qtfRNLFTiSUT4yXJz_bkKAHaHa?w=500&amp;h=500&amp;rs=1&amp;pid=ImgDetMain', category: 'mobile', quantity: 1 },
+    { name: 'Smartphone Y', shortDescription: 'Latest smartphone with high-end features', price: 799, image: 'https://th.bing.com/th/id/OIP.nvdM5sEm4DqG8oZb8nNStQHaHa?rs=1&amp;pid=ImgDetMain', category: 'mobile', quantity: 1 },
+    { name: 'Smartphone Z', shortDescription: 'Latest smartphone with high-end features', price: 799, image: 'https://th.bing.com/th/id/OIP.jfIv9WAqZQ7_2BqwWsa4OwHaHa?rs=1&amp;pid=ImgDetMain', category: 'mobile', quantity: 1 },
+    { name: 'Smartphone W', shortDescription: 'Latest smartphone with high-end features', price: 799, image: 'https://th.bing.com/th/id/OIP._1i-qKNGsucUsz-mB7UmlwHaHa?rs=1&amp;pid=ImgDetMain', category: 'mobile', quantity: 1 },
+    { name: 'Laptop Pro', shortDescription: 'Powerful laptop for professionals', price: 1200, image: 'https://th.bing.com/th/id/R.0e7a3fffa6f41b8b2cb95c25b0fa791a?rik=oCirMXvWuh5UDA&amp;riu=http%3a%2f%2f3.bp.blogspot.com%2f-OipYuuNx7bc%2fUYznOsel-mI%2fAAAAAAAAA48%2fvoQrFOp9vNI%2fs1600%2flaptop.jpg&amp;ehk=n8GXTV9JaytbWC9ckuoOP0DmWQu5pp7nylPuH9xdb3k%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0', category: 'Laptops', quantity: 1 },
+    { name: 'Laptop Air', shortDescription: 'Powerful laptop for professionals', price: 1200, image: 'https://th.bing.com/th/id/OIP.8dONY82usxXQzZHJ_OgwfQHaFR?rs=1&amp;pid=ImgDetMain', category: 'Laptops', quantity: 1 },
+    { name: 'Laptop Fly', shortDescription: 'Powerful laptop for professionals', price: 1200, image: 'https://www.bhphotovideo.com/images/images2500x2500/hp_5yh29ua_aba_pavilion_laptop_15_cs2010nr_core_1473122.jpg', category: 'Laptops', quantity: 1 },
+    { name: 'Laptop Neo', shortDescription: 'Powerful laptop for professionals', price: 1200, image: 'https://i5.walmartimages.com/asr/ee1840e1-d589-498f-810c-0d4ee6cc9a4e.f05cdc65e3976a4b7af1aec5806d8034.jpeg', category: 'Laptops', quantity: 1 },
+    { name: 'Wireless Earbuds', shortDescription: 'Comfortable and high-quality sound', price: 150, image: 'https://th.bing.com/th/id/OIP.iHWAPUI5CTb2XGFRZnK5nwHaHn?rs=1&amp;pid=ImgDetMain', category: 'Accessories', quantity: 1 },
+    { name: 'Smartwatch', shortDescription: 'Track your fitness and notifications', price: 250, image: 'https://i5.walmartimages.com/asr/4951cfe5-b949-435c-a4aa-8aa918d0752b.5b459bbce6b3752b5875a697023e03c8.jpeg', category: 'Accessories', quantity: 1 },
+    { name: '4K TV', shortDescription: 'Ultra HD television with vibrant colors', price: 1000, image: 'https://th.bing.com/th/id/OIP.JOpLqIn13jA-GIkRyfJNsgHaE8?rs=1&amp;pid=ImgDetMain', category: 'Home Entertainment', quantity: 1 },
+    { name: 'Gaming Console', shortDescription: 'Experience next-gen gaming with awesome feature', price: 500, image: 'https://cdn1.smartprix.com/rx-iGhlAzLuU-w1200-h1200/GhlAzLuU.jpg', category: 'Tablets', quantity: 1 },
+    { name: 'Bluetooth Speaker', shortDescription: 'Portable speaker with deep bass', price: 100, image: 'https://th.bing.com/th/id/OIP.rNxkdzB6EsyKwx3tG_OZvAHaHa?rs=1&amp;pid=ImgDetMain', category: 'Accessories', quantity: 1 },
+    { name: 'Tablet X', shortDescription: 'Lightweight and powerful tablet', price: 400, image: 'https://th.bing.com/th/id/OIP.tnPSJwThmR86reywvQFE0QHaFe?rs=1&amp;pid=ImgDetMain', category: 'Tablets', quantity: 1 },
+    { name: 'Tablet Y', shortDescription: 'Lightweight and powerful tablet', price: 400, image: 'https://th.bing.com/th/id/OIP.BqovwyUqHzvOW1BwrZxWiQHaHa?rs=1&amp;pid=ImgDetMain', category: 'Tablets', quantity: 1 },
+    { name: 'Tablet Z', shortDescription: 'Lightweight and powerful tablet', price: 400, image: 'https://i5.walmartimages.com/asr/bb3c4eb0-0ada-4cef-8b5f-97a11fa7ef0f.2d3805e39285bde9b9884e68e76e3608.jpeg', category: 'Tablets', quantity: 1 },
+    { name: 'Smart Home Assistant', shortDescription: 'Voice-controlled smart home device', price: 200, image: 'https://cdn.dribbble.com/users/849229/screenshots/17133429/media/102e7ae34d311113da78fa6a16a610c1.jpg?compress=1&amp;resize=840x630&amp;vertical=top', category: 'Accessories', quantity: 1 },
+    { name: 'Camera', shortDescription: 'Capture stunning photos and videos in real time', price: 750, image: 'https://th.bing.com/th/id/OIP.F3Cbk0WQAaZydDttBy_K_QHaGd?rs=1&amp;pid=ImgDetMain', category: 'Accessories', quantity: 1 },
+    { name: 'Smartphone Out of Stock', shortDescription: 'Out of stock mobile phone', price: 0, image: 'https://th.bing.com/th/id/OIP.V8NVXODUkODhicTKe7MblAHaIL?rs=1&amp;pid=ImgDetMain', category: 'mobile', quantity: 0 },
+    { name: 'Laptop Out of Stock', shortDescription: 'Out of stock laptop will be avaliable soon', price: 0, image: 'https://th.bing.com/th/id/OIP.WCCq2nZelTZuFIRbJF7AuAHaEK?rs=1&amp;pid=ImgDetMain', category: 'Laptops', quantity: 0 },
+    { name: 'Headphpone Out of Stock', shortDescription: 'Out of stock accessory', price: 0, image: 'https://th.bing.com/th/id/R.6a0b65c256fcc25d77267ca04858887e?rik=Vo668FFWe1dFww&amp;riu=http%3a%2f%2fpluspng.com%2fimg-png%2fheadphones-hd-png-headphones-png-image-1005.png&amp;ehk=bAzJKbYvpa7Aw02BGAv%2fuUVe5qV5I8jgX5PNlL%2f162I%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0', category: 'Accessories', quantity: 0 },
+    { name: 'Tablet Out of Stock', shortDescription: 'Out of stock tablet will be avaliable soon', price: 0, image: 'https://th.bing.com/th/id/OIP.kVw9lOC-hHRCei-ubFGMtAHaHa?rs=1&amp;pid=ImgDetMain', category: 'Tablets', quantity: 0 }
+  ];
+&nbsp;
+&nbsp;
+  constructor() { }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  getProducts(</span>category: string = <span class="branch-0 cbranch-no" title="branch not covered" >'all')</span>: Product[] {
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (category === 'all') {</span>
+<span class="cstat-no" title="statement not covered" >      return this.products;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return this.products.filter(<span class="fstat-no" title="function not covered" >product </span>=&gt; <span class="cstat-no" title="statement not covered" >product.category.toLowerCase() === category.toLowerCase())</span>;</span>
+  }
+<span class="fstat-no" title="function not covered" >  searchProducts(</span>query: string): Product[] {
+<span class="cstat-no" title="statement not covered" >    return this.products.filter(<span class="fstat-no" title="function not covered" >product </span>=&gt; <span class="cstat-no" title="statement not covered" >product.name.toLowerCase().includes(query.toLowerCase()))</span>;</span>
+  }
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2025-02-27T01:07:19.765Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    
